@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "To cite this repository, use:"
+license: CC-BY-4.0
+title: "Solar-Powered Glass Tumbler for Cape Maclear, Malawi"
+date-released: "2026-04-16"
+doi: XXX
+type: software
+authors:
+  - family-names: Steinke
+    given-names: Emma
+    email: steinkee@spacehopper.ethz.ch
+    orcid: https://orcid.org/0009-0005-9115-9379
+  - family-names: Tkaczuk
+    given-names: Jakub
+    email: jtkaczuk@ethz.ch
+    orcid: https://orcid.org/0000-0001-7997-9423
+  - family-names: Tilley
+    given-names: Elizabeth
+    email: tilleye@ethz.ch
+    orcid: https://orcid.org/0000-0002-2095-9724
+contact:
+  - family-names: Steinke
+    given-names: Emma
+    email: steinkee@spacehopper.ethz.ch
+    orcid: https://orcid.org/0009-0005-9115-9379
+version: 0.0.1
