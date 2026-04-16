@@ -3,6 +3,7 @@ message: "To cite this repository, use:"
 license: CERN-OHL-S-2.0
 title: "Solar-Powered Glass Tumbler for Cape Maclear, Malawi"
 date-released: "2026-04-16"
+doi: 10.5281/zenodo.19608383
 type: software
 authors:
   - family-names: Steinke

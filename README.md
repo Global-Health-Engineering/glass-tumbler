@@ -1,7 +1,7 @@
 <!-- badges: start -->
 [![](img/license-badge.svg)](LICENSE.md)
 [![](img/license-badge-ccby.svg)](data/LICENSE.md)
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.XXXXXXX.svg)](https://doi.org/10.5281/zenodo.XXXXXXX)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19608383.svg)](https://doi.org/10.5281/zenodo.19608383)
 <!-- badges: end -->
 
 <h1> Solar-Powered Glass Tumbler for Cape Maclear, Malawi: Design, Maintenance, Operation, and Results </h1>
