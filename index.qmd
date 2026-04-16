@@ -35,6 +35,7 @@ The machine is a standalone, solar-powered rotating drum system designed to proc
 ![Figure 3: Overview of the glass tumbler assembly](img/tumblerOverview.png)
 
 The system operates through five core stages:
+
 1. **Solar Harvesting**: A 260 W solar panel generates DC electricity from sunlight.
 2. **Power Regulation**: An electronics box containing a DC-DC converter and PWM motor controller stabilizes the variable solar voltage to a consistent 24 V.
 3. **Mechanical Drive**: A 350 W 24 V DC motor converts electrical energy into rotational motion.
