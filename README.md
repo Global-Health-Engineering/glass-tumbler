@@ -14,9 +14,9 @@
 <p align="middle">
 <img src="img/ETH_GHE_logo.svg" width=600>
 <br><br>
-This work is certified by the Open Source Hardware Association.<br \>
+<!-- This work is certified by the Open Source Hardware Association.<br \>
 <a href="https://certification.oshwa.org/XXXXXXXX.html"><img src="img/certification-mark-XXXXXXXX-wide.svg" width=300></a>
-<br>
+<br> -->
 <b>Complete description of system design, functionalities, operation, and maintenance is available on:<br \>
 <a href="https://global-health-engineering.github.io/glass-tumbler/">Github pages</a>.
 </b>
