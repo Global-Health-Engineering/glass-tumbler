@@ -1,8 +1,6 @@
 cff-version: 1.2.0
 message: "To cite this repository, use:"
-license:
-  - CERN-OHL-S-2.0
-  - CC-BY-4.0
+license: CERN-OHL-S-2.0
 title: "Solar-Powered Glass Tumbler for Cape Maclear, Malawi"
 date-released: "2026-04-16"
 type: software
