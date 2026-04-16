@@ -5,10 +5,11 @@
 
 <h1> Solar-Powered Glass Tumbler for Cape Maclear, Malawi: Design, Maintenance, Operation, and Results </h1>
 
-<b>Contributors</b>  
-- Emma Steinke <a href="https://orcid.org/0009-0005-9115-9379"> <img alt="ORCID logo" src="https://info.orcid.org/wp-content/uploads/2019/11/orcid_16x16.png" width="16" height="16" /> 0009-0005-9115-9379 </a> *design, construction, testing, writing*  
-- Jakub Tkaczuk <a href="https://orcid.org/0000-0001-7997-9423"> <img alt="ORCID logo" src="https://info.orcid.org/wp-content/uploads/2019/11/orcid_16x16.png" width="16" height="16" /> 0000-0001-7997-9423 </a> *supervision, development*  
-- Elizabeth Tilley <a href="https://orcid.org/0000-0002-2095-9724"> <img alt="ORCID logo" src="https://info.orcid.org/wp-content/uploads/2019/11/orcid_16x16.png" width="16" height="16" /> 0000-0002-2095-9724 </a> *supervision*
+**Contributors**
+
+- **Emma Steinke** &mdash; [![ORCID](https://info.orcid.org/wp-content/uploads/2019/11/orcid_16x16.png) 0009-0005-9115-9379](https://orcid.org/0009-0005-9115-9379) &mdash; *design, construction, testing, writing*
+- **Jakub Tkaczuk** &mdash; [![ORCID](https://info.orcid.org/wp-content/uploads/2019/11/orcid_16x16.png) 0000-0001-7997-9423](https://orcid.org/0000-0001-7997-9423) &mdash; *supervision, development*
+- **Elizabeth Tilley** &mdash; [![ORCID](https://info.orcid.org/wp-content/uploads/2019/11/orcid_16x16.png) 0000-0002-2095-9724](https://orcid.org/0000-0002-2095-9724) &mdash; *supervision*
 
 <br>
 <p align="middle">
