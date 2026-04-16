@@ -5,8 +5,8 @@
 | File | Contents |
 | :--- | :--- |
 | `fullTumbler.pdf` | Full assembly drawing with part callouts. |
-| `mainFrame.pdf` | Outer (main) frame — 80x40x2 mm steel beams. |
-| `innerFrame.pdf` | Inner (drum) frame — 30x30x2 mm steel beams. |
+| `mainFrame.pdf` | Outer (main) frame — 80 mm x 40 mm x 2 mm steel beams. |
+| `innerFrame.pdf` | Inner (drum) frame — 30 mm x 30 mm x 2 mm steel beams. |
 | `drumAndShaft.pdf` | Drum with shaft assembly (LPG cylinder body, 25 mm shaft). |
 | `flange.pdf` | Custom lathe-turned flange connecting the shaft to the drum. |
 | `drumLid.pdf` | Hexagonal drum lid with toggle-latch geometry and seal lining. |

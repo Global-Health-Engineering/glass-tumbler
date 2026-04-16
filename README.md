@@ -26,7 +26,7 @@
 
 # Background
 
-This repository details the construction, operation, and maintenance of the solar-powered glass tumbler built as part of a collaboration between the Malawian nonprofit organization, Sustainable Cape Maclear, and the Global Health Engineering Group at ETH Zürich.
+This repository details the construction, operation, and maintenance of the solar-powered glass tumbler built as part of a collaboration between the Malawian community-based organization, Sustainable Cape Maclear, and the Global Health Engineering Group at ETH Zürich.
 
 Cape Maclear is a rural Malawian town located within a UNESCO World Heritage Site, which has attracted significant tourism and growth in the last 20 years. This has led to a unique waste challenge: an abundance of non-returnable glass bottles that are not part of a deposit system. The accumulation of broken glass creates sharp fragments that pose significant injury risks to residents, tourists, and wildlife.
 

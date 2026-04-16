@@ -6,12 +6,12 @@ format: html
 
 This page summarizes the performance, operational lessons and financial viability of the solar-powered glass tumbler based on data collected in February 2026.
 
-## 1. Operational Performance
+## Operational Performance
 
 During its initial deployment from February 3 to February 27, the tumbler was operational for **118.5 hours**. It successfully produced nine batches of tumbled glass, with each batch weighing approximately 20 kg. The process effectively transforms sharp, hazardous glass shards into smooth, safe "sea glass".
 
 
-## 2. Process Optimization
+## Process Optimization
 
 Experimental trials were conducted to determine the most efficient parameters for a high-quality finish:
 
@@ -21,21 +21,21 @@ Experimental trials were conducted to determine the most efficient parameters fo
 
 ![Figure 1: Glass progression](img/glassTime.png)
 
-## 3. System Efficiency
+## System Efficiency
 
 * **Power Draw**: At the standard operating speed of 40 RPM, the system maintains a constant power draw of **79 W**. Even at 100% speed, the draw was 107.1 W.
-* **Annual Yield**: A single-panel (260W) setup is projected to yield **4'274 kg per year**, while a dual-panel (520W) setup can reach **5'060 kg per year**.
+* **Annual Yield**: A single-panel (260 W) setup is projected to yield **4'274 kg per year**, while a dual-panel (520 W) setup can reach **5'060 kg per year**.
 
-## 4. Financial Viability
+## Financial Viability
 
-The total material cost (CAPEX) for the standard 260W system was **$581.10**. The **Minimum Viable Price** represents the break-even point required to cover all annual operating costs and amortized construction costs over a 5-year equipment lifetime.
+The total material cost (CAPEX) for the standard 260 W system was **$581.10**. The **Minimum Viable Price** represents the break-even point required to cover all annual operating costs and amortized construction costs over a 5-year equipment lifetime.
 
-| Metric | 260W Setup | 520W Setup |
+| Metric | 260 W Setup | 520 W Setup |
 | :--- | :---: | :---: |
 | Annual Yield | 4'274 kg  | 5'060 kg  |
 | **Minimum Viable Price (USD per 100 kg)** | **$4.94** | **$4.40**  |
 
-## 5. Reuse and Creative Outcomes
+## Reuse and Creative Outcomes
 
 Tumbled glass is already being integrated into the local economy in Cape Maclear. Local artisans have explored the material's creative potential, producing jewelry and decorative items (see Figure 2).
 

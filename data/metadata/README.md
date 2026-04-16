@@ -21,12 +21,12 @@
 * **glass_brightness.csv**: Raw data containing pixel brightness measurements for glass samples at various tumbling durations.
 * **imperfections.csv**: Raw counts of physical imperfections across different glass batches and abrasive media.
 * **irradiance_data_2024.csv**: Meteorological data including Global Horizontal Irradiance (GHI), cloud opacity, and air temperature for the year 2024.
-* **derived_lifetime_costs.csv**: Calculated financial projections comparing the cost per 100kg of treated material over the system's lifetime.
+* **derived_lifetime_costs.csv**: Calculated financial projections comparing the cost per 100 kg of treated material over the system's lifetime.
 * **glass_brightness_averages.csv**: Processed dataset providing the mean brightness values for each glass treatment category over time.
 * **imperfections_averages.csv**: Processed dataset providing the average number of imperfections for each glass treatment category.
-* **tumbler_start_260W.csv**: Start-up feasibility analysis for the tumbler using a single 260W solar panel configuration.
-* **tumbler_start_520W.csv**: Start-up feasibility analysis for the tumbler using a dual 520W solar panel configuration.
-* **tumbler_operational_stats.csv**: Yearly statistical distribution of daily operational runtimes for both the 260W and 520W power scenarios.
+* **tumbler_start_260W.csv**: Start-up feasibility analysis for the tumbler using a single 260 W solar panel configuration.
+* **tumbler_start_520W.csv**: Start-up feasibility analysis for the tumbler using a dual 520 W solar panel configuration.
+* **tumbler_operational_stats.csv**: Yearly statistical distribution of daily operational runtimes for both the 260 W and 520 W power scenarios.
 
 # METHODOLOGICAL INFORMATION
 For a comprehensive breakdown of the experimental design, data collection protocols, and the theoretical framework supporting this study, please refer to the final master thesis report: **Development and Field Testing of a Solar-Powered Glass Tumbler for Waste Glass Processing in Cape Maclear, Malawi**.
@@ -61,7 +61,7 @@ To validate the efficacy of the abrasive media (Water, Sand, Silica Grit), a man
 The financial viability of the system was modeled over its projected operational lifespan. The analysis accounts for both initial investment and recurring maintenance costs.
 * **CAPEX (Capital Expenditure):** Costs associated with the solar panels, motor, structural frame, and tumbler drum.
 * **OPEX (Operating Expenditure):** Maintenance requirements including scheduled applications of oil and grease for chain lubrication as well as labour costs. 
-* **Normalization:** The final metric is calculated as the total lifetime cost divided by the total mass of glass processed, expressed in **USD per 100kg**.
+* **Normalization:** The final metric is calculated as the total lifetime cost divided by the total mass of glass processed, expressed in **USD per 100 kg**.
 
 ## Instrument- or software-specific information needed to interpret the data: 
 Image Processing: Python 3.11.5
