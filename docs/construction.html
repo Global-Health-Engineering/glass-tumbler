@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.545">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>docs - Construction Guide</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script defer="" data-domain="global-health-engineering.github.io/glass-tumbler" src="https://plausible.io/js/script.js"></script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">docs</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="./construction.html" aria-current="page"> 
+<span class="menu-text">Construction</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./operation-maintenance.html"> 
+<span class="menu-text">Operation &amp; Maintenance</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./results.html"> 
+<span class="menu-text">Results from Operation</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="mailto:ghe@mavt.ethz.ch?subject=Glass Tumbler"> <i class="bi bi-envelope-at" role="img" aria-label="Email">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/Global-Health-Engineering/glass-tumbler"> <i class="bi bi-github" role="img" aria-label="GitHub">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://matrix.to/#/#ghe-open:staffchat.ethz.ch"> <i class="bi bi-chat-left-dots" role="img" aria-label="Matrix">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#frames" id="toc-frames" class="nav-link active" data-scroll-target="#frames"><span class="header-section-number">1</span> Frames</a></li>
+  <li><a href="#drum" id="toc-drum" class="nav-link" data-scroll-target="#drum"><span class="header-section-number">2</span> Drum</a>
+  <ul class="collapse">
+  <li><a href="#drum-lid" id="toc-drum-lid" class="nav-link" data-scroll-target="#drum-lid"><span class="header-section-number">2.1</span> Drum Lid</a></li>
+  </ul></li>
+  <li><a href="#drivetrain" id="toc-drivetrain" class="nav-link" data-scroll-target="#drivetrain"><span class="header-section-number">3</span> Drivetrain</a></li>
+  <li><a href="#electronics" id="toc-electronics" class="nav-link" data-scroll-target="#electronics"><span class="header-section-number">4</span> Electronics</a></li>
+  <li><a href="#solar-panel-stand" id="toc-solar-panel-stand" class="nav-link" data-scroll-target="#solar-panel-stand"><span class="header-section-number">5</span> Solar Panel Stand</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Construction Guide</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p><strong>Note:</strong> The CAD model of the assembly and the PDF versions of all drawings are available in the <a href="https://github.com/Global-Health-Engineering/glass-tumbler/tree/main/cad"><code>cad</code></a> directory of the GitHub repository.</p>
+<p>The mechanical design of the tumbler is inspired by a concrete mixer configuration to enable ease of loading and unloading glass. The following two tutorials on building DIY concrete mixers served as primary sources of inspiration:</p>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=cXIDimhZ2z8">Design using an 11kg gas cylinder as a drum</a></li>
+<li><a href="https://youtu.be/vJwhrh9DE5g?si=aXEkfoyNJi_KFIie">Design using an oil barrel as a drum</a></li>
+</ul>
+<p>If you intend to build a similar design, watching these videos is highly recommended, as they provide valuable insights into the manufacturing process.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/fullTumblerAssembly.png" class="img-fluid figure-img"></p>
+<figcaption>Figure 1: Full Tumbler Assembly</figcaption>
+</figure>
+</div>
+<p>Figure 1 shows the final assembly drawing of the tumbler with its individual components. The wall thickness of all metal components is at least 2mm to facilitate easier welding.</p>
+<section id="frames" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="frames"><span class="header-section-number">1</span> Frames</h2>
+<p>First, the inner (drum) frame is constructed from 30x30x2mm steel beams. The dimensions are shown in Figure 2. Although the technical drawing includes two sets of castor wheels, one set is actually sufficient; the rear section holding the second set may be omitted. A metal plate is mounted at the back of the inner frame to hold the bearings and the motor. In this specific build, a 5mm thick plate was used. To ensure a stronger weld for the 25mm shafts, two 25mm holes were pre-drilled for the shafts to sit in. Because the ideal position of the castor wheels depends on their specific size, their attachment points should be adjustable. It is best to attach these during a later phase once the drum shaft is seated on the inner frame.</p>
+<p>Next, the legs of the outer frame are constructed from 80x40x2mm steel beams. To increase weld strength, two 80x40mm slots are cut into the base beams so the legs can be inserted into the feet before welding.</p>
+<p>The two main bearings are attached to the outer frame legs using angle irons and M8 bolts. Two additional bearings are attached to the front and back of the inner frame’s backplate to support the drum shaft. The inner frame is then aligned between the two legs to determine the final length of the connection beams. <strong>Note:</strong> The two legs of the outer frame should only be welded together while the inner frame is positioned between them (see Figure 2).</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/frameAlignment.png" class="img-fluid figure-img"></p>
+<figcaption>Figure 2: Technical drawing of the inner frame and alignment with the legs of the outer frame</figcaption>
+</figure>
+</div>
+<p>Once the first connection beam is welded, additional reinforcement beams can be added (see Figure 3). In this design, the outer frame is further reinforced with beams at the base and crossbeams to stabilize the legs. This step is highly recommended if sufficient material is available.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/reinforcement.png" class="img-fluid figure-img"></p>
+<figcaption>Figure 3: Further reinforcement beams in the outer frame</figcaption>
+</figure>
+</div>
+<p>Figure 4 provides the dimensions and additional manufacturing notes for the outer (main) frame. Note that it does not contain the reinforcement beams as these were added after the CAD design had been completed.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/mainFrame.png" class="img-fluid figure-img"></p>
+<figcaption>Figure 4: Technical drawing of outer (main) frame</figcaption>
+</figure>
+</div>
+</section>
+<section id="drum" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="drum"><span class="header-section-number">2</span> Drum</h2>
+<p>A 19kg LPG cylinder (32cm diameter, 85cm height) was chosen for its wall thickness and abrasion resistance. As this is an uncommon size, it was sourced via Facebook Marketplace in Blantyre.</p>
+<p><strong>Safety Warning:</strong> Ensure all gas has been completely purged from the cylinder. This is achieved by opening the valve and letting it vent overnight (after all usable gas is exhausted). The cylinder must then be filled completely with water and emptied to displace any remaining gas pockets. This step is critical for safety before cutting.</p>
+<p>Once the drum is completely purged, use an angle grinder to make several cuts (see Figure 5):</p>
+<ol type="1">
+<li>Cut the top lip off from the top of the cylinder; this will be reused as the rim for the new opening.</li>
+<li>Remove the handle.</li>
+<li>Cut a round hole the size of the handle.</li>
+<li>Remove the base.</li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/gasCylinder.png" class="img-fluid figure-img"></p>
+<figcaption>Figure 5: Gas cylinder cuts and lip welded on to the top</figcaption>
+</figure>
+</div>
+<p>Once these cuts are complete, the lip removed from the top can be welded back onto the newly cut hole (see Figure 5).</p>
+<p>The next step is to attach the shaft to the back of the drum. This must be done with great precision to ensure the shaft’s axis is perfectly aligned with the drum’s axis. A custom flange was fabricated using a lathe (see Figure 6) and welded onto the 25mm shaft. While initial attempts were made to weld the flange directly to the drum, this resulted in warping and axial misalignment. Consequently, four holes were drilled into the drum, and the flange was secured using four M6 bolts. These holes were sealed with epoxy putty on both the interior and exterior to ensure the drum remains watertight. Final tightening and alignment should be performed while the drum is mounted to the inner frame. By rotating the drum manually, you can check for wobbling; minor misalignments can be corrected by placing thin metal shims under the bolts.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/shaftAttachment.png" class="img-fluid figure-img"></p>
+<figcaption>Figure 6: Dimensions of the custom flange and final shaft attachment</figcaption>
+</figure>
+</div>
+<p>Although the bearing seats are designed to prevent axial displacement, a heavy load of glass puts immense pressure on these seats, which may loosen over time and cause the drum to slide backward. To prevent this, an additional support wheel (see Figure 7) was added to the inner frame’s drum plate. As this was a later modification, it is not shown in the CAD model.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/extraWheel.png" class="img-fluid figure-img"></p>
+<figcaption>Figure 7: Extra wheel</figcaption>
+</figure>
+</div>
+<section id="drum-lid" class="level3" data-number="2.1">
+<h3 data-number="2.1" class="anchored" data-anchor-id="drum-lid"><span class="header-section-number">2.1</span> Drum Lid</h3>
+<p>The lid features a hexagonal design where the inner triangle fits snugly around the drum’s lip, and the outer triangle aligns with the toggle latches on the drum wall (see Figure 8). The interior is lined with a rubber seal (standard door/window weatherstripping).</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/drumLid.png" class="img-fluid figure-img"></p>
+<figcaption>Figure 8: Dimensions of lid, as attached to the drum with toggle latches, lid lining</figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="drivetrain" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="drivetrain"><span class="header-section-number">3</span> Drivetrain</h2>
+<p>Although a belt drive was initially planned, it proved unreliable, and the system was converted to a <strong>bicycle chain drive</strong>. The gear ratio from the motor to the bike sprocket is 1:6. While the sprocket can be welded directly to the shaft, this often causes warping, resulting in poor chain rotation. Instead, the sprocket is bolted to a connection part that is itself welded to the shaft. A chain tensioner was also added to allow for adjustments (see Figure 9). Once the drivetrain was completed, a lockable protective cover was added to prevent theft and protect the motor. This housing includes a door for easy access during maintenance and repairs.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/motorHousing.png" class="img-fluid figure-img"></p>
+<figcaption>Figure 9: Drivetrain as built protected by the housing</figcaption>
+</figure>
+</div>
+</section>
+<section id="electronics" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="electronics"><span class="header-section-number">4</span> Electronics</h2>
+<p>The following electronic components were used:</p>
+<ul>
+<li><strong><a href="https://amzn.eu/d/06L4CkVM">24V DC Motor</a>:</strong> A 350W motor with an integrated planetary gearbox (310 RPM max). With the 1:6 gear ratio, the speed is reduced to approximately 51 RPM, which is ideal for a 30cm diameter drum (the optimal range is 35–50 RPM). Testing showed the tumbler uses a maximum of 110W when full, so a less powerful motor would also suffice.</li>
+<li><strong><a href="https://amzn.eu/d/0bTFwdRn">DC-DC Converter</a>:</strong> A high-capacity 1000W converter with an integrated cooling fan. When selecting a converter, ensure the solar panel voltage fits within the input range (25–90V in this case) and the motor’s nominal voltage fits the output range (2.5–50V). An oversized converter is recommended to prevent overheating during long operation cycles. The output voltage is tuned via a potentiometer screw on the unit.</li>
+<li><strong><a href="https://amzn.eu/d/0d9MLGuE">PWM Controller</a>:</strong> This model features an integrated on/off switch, LED display, and speed control knob. Ensure the controller is compatible with your motor’s voltage and rated current.</li>
+<li><strong>Solar Panel:</strong> The system is powered by a 260W solar panel featuring a maximum power voltage (<span class="math inline">\(V_{mp}\)</span>) of 41.3V and an open-circuit voltage (<span class="math inline">\(V_{oc}\)</span>) of 49.2V. While a second identical panel was purchased and can be wired in parallel to double the available solar capacity, a single-panel configuration proved sufficient for most weather conditions during testing.</li>
+<li><strong><a href="https://amzn.eu/d/0d3LKDwU">50A Circuit Breaker</a>, <a href="https://amzn.eu/d/0czYagVh">25A Circuit Breaker</a></strong>: DC-rated circuit breakers were used to protect and easily isolate the circuit.</li>
+<li><strong><a href="https://amzn.eu/d/03LGwiDu">Voltmeter/Ammeter</a>:</strong> Used to monitor voltage and current before and after the converter. While optional, it is very helpful for troubleshooting and monitoring power consumption.</li>
+<li><strong><a href="https://www.decathlon.ch/de/p/velocomputer-kabellos-bc-120/346167/m8799862">Bicycle Tachometer</a>:</strong> Used to keep track of the total rotations the tumbler performed (as this is weather-dependant). It is also an optional component that was simply helpful for data collection purposes.</li>
+</ul>
+<p>The electronics were wired according to the layout shown in Figure 10, which also illustrates the component placement within the electronics box. For all primary power connections, standard <strong>10 AWG (6 mm²)</strong> solar wire was used, terminated with corresponding ring ferrules to ensure secure and low-resistance contact points.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/electronicsOverview.png" class="img-fluid figure-img"></p>
+<figcaption>Figure 10: Electronics</figcaption>
+</figure>
+</div>
+<p>For a more comprehensive explanation, please refer to the <a href="doc/detailed_guide.pdf"><strong>Detailed Guide PDF</strong></a>, specifically Section 4: Detailed System Description, located in the <a href="https://github.com/Global-Health-Engineering/glass-tumbler/tree/main/doc"><code>doc</code></a> directory of the GitHub repository.</p>
+</section>
+<section id="solar-panel-stand" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="solar-panel-stand"><span class="header-section-number">5</span> Solar Panel Stand</h2>
+<p>Because the operating site in Cape Maclear is not monitored overnight, the solar panel is stored indoors when not in use. To facilitate this, a mobile and adjustable solar panel stand was constructed, as shown in Figure 11. It was constructed using 40mm angle irons.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/solarPanelStand.png" class="img-fluid figure-img"></p>
+<figcaption>Figure 11: Solar panel stand at different angles of inclination</figcaption>
+</figure>
+</div>
+<p>The stand is equipped with four wheels — two fixed wheelbarrow wheels for stability on uneven terrain and two rotating castor wheels — allowing the entire assembly to be easily transported between the storage location and the tumbler. Additionally, the stand features a hinged frame and a support leg that allow the solar panel to be tilted to the optimal angle for maximum solar intake throughout the day.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>This project was supported by the <a href="https://ghe.ethz.ch">Global Health Engineering Group at ETH Zurich</a></p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="mailto:ghe@mavt.ethz.ch?subject=Glass Tumbler">
+      <i class="bi bi-envelope-at" role="img" aria-label="Email">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/Global-Health-Engineering/glass-tumbler">
+      <i class="bi bi-github" role="img" aria-label="GitHub">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://matrix.to/#/#ghe-open:staffchat.ethz.ch">
+      <i class="bi bi-chat-left-dots" role="img" aria-label="Matrix">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>
