@@ -10,7 +10,7 @@ Datasets supporting the performance, efficiency, and financial analyses reported
 
 ## Licensing
 
-All datasets in this directory are released under [Creative Commons Attribution 4.0 International (CC-BY-4.0)](https://creativecommons.org/licenses/by/4.0/).
+All datasets in this directory are released under [Creative Commons Attribution 4.0 International (CC-BY-4.0)](LICENSE.md). This differs from the hardware design at the repository root, which is under [CERN-OHL-S v2](../LICENSE.md).
 
 ## Start here
 

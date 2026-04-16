@@ -7,6 +7,7 @@ format: html
 
 <!-- badges: start -->
 [![](img/license-badge.svg)](https://ohwr.org/cern_ohl_s_v2.txt)
+[![](img/license-badge-ccby.svg)](https://creativecommons.org/licenses/by/4.0/)
 <!-- badges: end -->
 
 **Contributors**

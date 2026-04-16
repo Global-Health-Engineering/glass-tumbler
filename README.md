@@ -1,5 +1,6 @@
 <!-- badges: start -->
-[![](img/license-badge.svg)](https://ohwr.org/cern_ohl_s_v2.txt)
+[![](img/license-badge.svg)](LICENSE.md)
+[![](img/license-badge-ccby.svg)](data/LICENSE.md)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.XXXXXXX.svg)](https://doi.org/10.5281/zenodo.XXXXXXX)
 <!-- badges: end -->
 
@@ -44,4 +45,10 @@ CAD models and technical drawings are available in the [`cad`](cad/) directory.
 
 # License
 
-The complete design and user manual are licensed under the [CERN Open Hardware Licence Version 2 - Strongly Reciprocal](LICENSE.md).
+Different parts of this repository are released under different licenses, following standard practice for open-hardware research projects:
+
+| Component | License |
+| :--- | :--- |
+| Hardware design (CAD, drawings, STEP files in [`cad/`](cad/)) | [CERN-OHL-S v2](LICENSE.md) |
+| Documentation (qmd pages, guides in [`doc/`](doc/), this README) | [CC-BY-4.0](doc/LICENSE.md) |
+| Datasets ([`data/`](data/)) | [CC-BY-4.0](data/LICENSE.md) |
