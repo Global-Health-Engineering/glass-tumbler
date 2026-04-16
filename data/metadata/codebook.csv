@@ -1,0 +1,31 @@
+directory,file_name,variable_name,variable_type,variable_values,description,unit
+raw_data,glass_brightness.csv,filename,text,"glass-silica-4h-1.JPG, glass-water-6h-2.JPG, ...",Name of the image file analyzed that contains the treatment group and time information of the sample, NA
+raw_data,glass_brightness.csv,time_h,numeric, "0-24",Number of hours that the glass sample was in the glass tumbler, hours
+raw_data,glass_brightness.csv,brightness,numeric,,Measured average brightness of the image pixels. This represents the luminous intensity of an individual pixel. A value of 0 represents absolute black (no light) while 255 represents absolute white (maximum intensity).,Pixel Intensity Units
+raw_data,imperfections.csv,Batch Type,categorical,"Just Water, Sand, Silica Grit",Classification of the type of abrasive medium used in the tumbling test,NA
+raw_data,imperfections.csv,Hours,numeric,"0-24",Number of hours that the glass sample was tumbled for, hours
+raw_data,imperfections.csv,R1,numeric,,Number of imperfections counted on the largest glass piece from that sample,number of imperfections
+raw_data,imperfections.csv,R2,numeric,,Number of imperfections counted on the second largest glass piece from that sample,number of imperfections
+raw_data,imperfections.csv,R3,numeric,,Number of imperfections counted on the third largest glass piece from that sample,number of imperfections
+raw_data,imperfections.csv,R4,numeric,,Number of imperfections counted on the fourth largest glass piece from that sample,number of imperfections
+raw_data,imperfections.csv,R5,numeric,,Number of imperfections counted on the fifth largest glass piece from that sample,number of imperfections
+raw_data,imperfections.csv,R6,numeric,,Number of imperfections counted on the sixth largest glass piece from that sample,number of imperfections
+raw_data,imperfections.csv,R7,numeric,,Number of imperfections counted on the seventh largest glass piece from that sample,number of imperfections
+raw_data,irradiance_data_2024.csv,period_end,text,,The timestamp (UTC) marking the end of the observation or forecast interval,ISO 8601
+raw_data,irradiance_data_2024.csv,ghi,numeric,,Global Horizontal Irradiation: The total amount of shortwave radiation received by a surface horizontal to the ground. This is the sum of direct and diffuse radiation, $W/m^2$
+raw_data,irradiance_data_2024.csv,cloud_opacity,numeric,"0-100",A measure of how much sunlight is obscured by clouds representing the "thickness" of cloud cover affecting solar transmission.,%
+raw_data,irradiance_data_2024.csv,air_temp,numeric,,The ambient dry-bulb air temperature at 2 meters above ground level,  $^\circ$C 
+derived_data,derived_lifetime_costs.csv,Scenario,categorical,"520W Setup, 260W Setup",Describes whether the financial scenario is based on one or two solar panels,NA
+derived_data,derived_lifetime_costs.csv,Lifetime_Years,numeric,"0-10",Assumed lifetime of glass tumbler tumbler, years
+derived_data,derived_lifetime_costs.csv,USD_per_100kg,numeric,,Projected financial cost of tumbled glass based on the assumed lifetime of the glass tumbler, USD per 100kg
+derived_data,glass_brightness_averages.csv,category,categorical,"Just Water, Sand, Silica Grit",Classification of the type of abrasive medium used in the tumbling test,NA
+derived_data,glass_brightness_averages.csv,time_h,numeric,"0-24",Number of hours that the glass sample was in the glass tumbler, hours
+derived_data,glass_brightness_averages.csv,avg_brightness,numeric,"0-255",Measured average brightness of the image pixels for one abrasive media and time combination (average from three glass pieces). This represents the luminous intensity of an individual pixel. A value of 0 represents absolute black (no light) while 255 represents absolute white (maximum intensity).,Pixel Intensity Units
+derived_data,imperfections_averages.csv,Batch Type,categorical,"Just Water, Sand, Silica Grit",Classification of the type of abrasive medium used in the tumbling test,NA
+derived_data,imperfections_averages.csv,Hours,numeric,"0-24",Number of hours that the glass sample was in the glass tumbler, hours
+derived_data,imperfections_averages.csv,Average,numeric,,Average number of imperfections counted from the seven largest glass pieces from that sample,number of imperfections
+derived_data,tumbler_start_260W.csv,Can tumbler start?,Boolean,"0,1",A binary indicator of whether the GHI at a specific hour of the year provides sufficient wattage to initiate motor rotation for a given hour of the year given the use of one 260W solar panel.,binary
+derived_data,tumbler_start_520W.csv,Can tumbler start?,Boolean,"0,1",A binary indicator of whether the GHI at a specific hour of the year provides sufficient wattage to initiate motor rotation for a given hour of the year given the use of two 260W solar panels.,binary
+derived_data,tumbler_operational_stats.csv,Hours,numeric,"0-10",The total duration of operational time (runtime) achieved by the tumbler in a single 24-hour period., hours
+derived_data,tumbler_operational_stats.csv,Days for 260W,numeric,"0-365",The number of days in the year where the 260W setup was operational for exactly the specified number of hours,days
+derived_data,tumbler_operational_stats.csv, Days for 520W,numeric,'0-365",The number of days in the year where the 520W setup was operational for exactly the specified number of hours, days

@@ -1,0 +1,10 @@
+directory,filename,description,license
+data/raw_data,glass_brightness.csv,Raw data containing pixel brightness measurements for the individual glass samples at various tumbling durations and with various abrasive media.,CC-BY
+data/raw_data,imperfections.csv,Raw counts of physical imperfections across different glass batches and abrasive media.,CC-BY
+data/raw_data,irradiance_data_2024.csv,"Meteorological data including Global Horizontal Irradiance (GHI), cloud opacity, and air temperature from SolCast for Cape Maclear, Malawi for the year 2024.",CC-BY
+data/derived_data,derived_lifetime_costs.csv,Calculated financial projections comparing the cost per 100kg of tumbled glass based on the assumed lifetime of the glass tumbler.,CC-BY
+data/derived_data,glass_brightness_averages.csv,Processed dataset providing the mean brightness values for each glass sample batch (of time and abrasive media).,CC-BY
+data/derived_data,imperfections_averages.csv,Processed dataset providing the average number of imperfections for each glass treatment category and time tumbled.,CC-BY
+data/derived_data,tumbler_start_260W.csv,Start-up feasibility analysis for the tumbler using a single 260W solar panel configuration.,CC-BY
+data/derived_data,tumbler_start_520W.csv,Start-up feasibility analysis for the tumbler using a dual 520W solar panel configuration.,CC-BY
+data/derived_data,tumbler_operational_stats.csv,Yearly statistical distribution of daily operational runtimes for both the 260W and 520W power scenarios.,CC-BY
