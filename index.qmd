@@ -61,7 +61,7 @@ The system operates through five core stages:
 
 The total cost to manufacture the system is approximately **$581.10**. A detailed breakdown of the components, specifications, and procurement origins is provided in the table below.
 
-| Item | Specification | Origin | Qty | Unit ($) | Total ($) |
+| Item | Specification | Origin | Qty | Unit (\$) | Total (\$) |
 | :--- | :--- | :---: | :---: | :---: | :---: |
 | **Drivetrain** | | | | | **56.50** |
 | DC Motor | 350 W | CH | 1 | 48.00 | 48.00 |
