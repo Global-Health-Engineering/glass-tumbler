@@ -17,6 +17,16 @@ format: html
 - **Jakub Tkaczuk** &mdash; [![ORCID](https://info.orcid.org/wp-content/uploads/2019/11/orcid_16x16.png) 0000-0001-7997-9423](https://orcid.org/0000-0001-7997-9423) &mdash; *supervision, page development & maintenance*
 - **Elizabeth Tilley** &mdash; [![ORCID](https://info.orcid.org/wp-content/uploads/2019/11/orcid_16x16.png) 0000-0002-2095-9724](https://orcid.org/0000-0002-2095-9724) &mdash; *supervision*
 
+<br>
+<p align="middle">
+![](img/ETH_GHE_logo.svg){width=90%}
+<br><br> This work is certified by the Open Source Hardware
+Association.\
+[![](img/certification-mark-CH000030-wide.svg){width=50%}](https://certification.oshwa.org/ch000030.html)
+<br>
+Github repository for this page sits [here](https://github.com/Global-Health-Engineering/glass-tumbler).
+</p>
+
 ## Introduction
 
 Cape Maclear is a rural Malawian town located within a UNESCO World Heritage Site, which has attracted a lot of tourism and growth in the last 20 years. This has led to a unique waste challenge: an abundance of non-returnable glass bottles that are not part of a deposit system. As shown in Figure 1, this broken glass creates sharp fragments that pose significant injury risks to residents, tourists, and wildlife.
